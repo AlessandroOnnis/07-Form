@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Lezione HTML</title>
+	<style>
+		label {
+			display: block
+		}
+	</style>
+</head>
+
+<body>
+	<form action="indirizzo server" method="post">
+		<h2>Registrazione</h2>
+		<section class="user-data">
+			<div class="nome">
+				<label for="nome"></label>
+				<input type="text" name="nome" id="nome" placeholder="Nome" required>
+			</div>
+		<br>
+			<div class="cognome">
+				<label for="cognome"></label>
+				<input type="text" name="cognome" id="cognome" placeholder="Cognome" required>
+			</div>
+		<br>
+			<div class="email">
+				<label for="email"></label>
+				<input type="email" name="email" id="email" placeholder="E-mail" required>
+			</div>
+		<br>
+			<div class="password">
+				<label for="password"></label>
+				<input type="password" name="password" id="password" placeholder="Password" required>
+			</div>
+			<div class="data-nascita"><br>
+				<label for="data-nascita">Data di nascita</label>
+				<input type="date" name="data-nascita" id="data-nascita" required>
+			</div>
+		</section>
+		<section class="sales">
+			<div class="piani">
+				<label for="piano" aria-checked="true"><h2>Scegli il piano</h2></label>
+				<select name="piani" id="piani" required>
+					<optgroup class="offerte-standard">
+						<option value="30dayfree">30 Day Free</option>
+						<option value="30€ mensile">30€ Mensile</option>
+						<option value="110€ quadrimestre">110€ Quadrimestre</option>
+						<option value="300€ annuale">300€ Annuale</option>
+					</optgroup>
+				</select>
+			</div>
+		<br>
+			<div class="aggiunte pro"> <strong> Aggiunte Pro</strong>
+				<label for="supporto telefonico"></label>
+				Supporto Telefonico<input type="checkbox" name="supporto telefonico" id="supporto telefonico">
+				<label for="supporto email"></label>
+				Supporto via E-mail<input type="checkbox" name="supporto email" id="supporto email">
+				<label for="supporto incaricato"></label>
+				Supporto Incaricato<input type="checkbox" name="supporto incaricato" id="supporto incaricato">
+			</div>
+		</section>
+		<br>
+		<section class="payment">
+			<div class="data-payment">
+				<label for="credit-card"></label>
+				<input type="text " name="credit-card" id="credit-card" placeholder="0000 0000 0000 0000" minlength="16" maxlength="16" 
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')" required>
+			</div>
+		<br>
+			<div class="cvc">
+				<label for="cvc"></label>
+				<input type="password" name="cvc" id="cvc" placeholder="CVC" required>
+			</div>
+		<br>
+			<div class="scadenza">
+				<label for="scadenza">Scadenza</label>
+				<input type="date" name="scadenza" id="scadenza" required>
+			</div>
+		<br>
+			<div class="indirizzo-fatturazione">
+				<label for="indirizzo-fatturazione"></label>
+				<input type="text" name="indirizzo-fatturazione" id="indirizzo-fatturazione" placeholder="Indirizzo di fatturazione" required>
+			</div>
+		</section>
+		<br>
+			<div class="submit">
+				<label for="submit"></label>
+				<input type="button" value="Acquista">
+			</div>
+	</form>
+
+</body>
+
+</html>
